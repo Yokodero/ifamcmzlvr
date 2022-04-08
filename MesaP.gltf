@@ -1,0 +1,142 @@
+{
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 4069368,
+      "target": 34962,
+      "byteStride": 12
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 4069368,
+      "byteLength": 1356456,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 5425824,
+      "byteLength": 4069368,
+      "target": 34962,
+      "byteStride": 12
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 339114,
+      "max": [
+        30,
+        23,
+        42.921
+      ],
+      "min": [
+        -30,
+        -24,
+        0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5125,
+      "count": 339114,
+      "max": [
+        339113
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 339114,
+      "max": [
+        0.9725490196078431,
+        0.9019607843137255,
+        0.7176470588235294
+      ],
+      "min": [
+        0.30980392156862746,
+        0.30980392156862746,
+        0.30980392156862746
+      ],
+      "type": "VEC3"
+    }
+  ],
+  "asset": {
+    "version": "2.0",
+    "generator": "Autodesk.Tinkercad"
+  },
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "metallicFactor": 0.5,
+        "roughnessFactor": 0.5
+      },
+      "name": "lambert2SG.001"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "mode": 4,
+          "attributes": {
+            "POSITION": 0,
+            "COLOR_0": 2
+          },
+          "indices": 1,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "nodes": [
+        1
+      ],
+      "name": "Tinkercad GLTF Scene"
+    }
+  ],
+  "scene": 0,
+  "nodes": [
+    {
+      "name": "Mesh_Mesh_head_geo.001_lambert2SG.001",
+      "mesh": 0
+    },
+    {
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        2.220446049250313e-16,
+        -1,
+        0,
+        0,
+        1,
+        2.220446049250313e-16,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "children": [
+        0
+      ]
+    }
+  ],
+  "buffers": [
+    {
+      "uri": "MesaP_data.bin",
+      "byteLength": 9495192
+    }
+  ]
+}

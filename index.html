@@ -11,11 +11,11 @@
     <script src="http://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
 
-    <title>Document</title>
+    <title>Sala de Aulat</title>
 </head>
 
 <body>
-    <a-scene physics="driver:ammo">
+    <a-scene physics="driver:ammo;">
         <a-assets>
             <a-asset-item id="mesa" src="Mesa.gltf"></a-asset-item>
             <a-asset-item id="mesaP" src="MesaP.gltf"></a-asset-item>
@@ -49,34 +49,51 @@
                 geometry="primitive: ring">
 
                 </a-cursor>
-            </a-entity>    
+            </a-entity>
         </a-entity>
-        <a-box ammo-body="type: static" ammo-shape="type: cylinder" color = red; position = "0 3 0"ammo-body="type: dynamic" ammo-shape="type: box"></a-box>
+        <a-box ammo-body="type: dynamic" ammo-shape="type: box" color = red; position = "0 3 0"ammo-body="type: dynamic" ammo-shape="type: box"></a-box>
+        <a-box ammo-body="type:static" ammo-shape="type:box" visible = "false" width = "3" height="3" depth = "2" position = "3.01 0 1.5"></a-box>
+            
         <a-gltf-model class="mesa" src="#mesaP" position="3.01 0 1.5" rotation="0 180 0" scale="0.05 0.05 0.05.">
         </a-gltf-model>
         <a-entity id="fileira1" position="0 0 4">
-            <a-gltf-model class="mesa" src="#mesa" position="0 0 0" scale="0.05 0.05 0.05"></a-gltf-model>
+            <a-box ammo-body="type:static" ammo-shape="type:box" visible = "false" width = "3" height="3" depth = "2"></a-box>
+            <a-gltf-model class="mesa" src="#mesa" position="-0 0 0" scale="0.05 0.05 0.05"></a-gltf-model>
+            <a-box ammo-body="type:static" ammo-shape="type:box" visible = "false" width = "3" height="3" depth = "2" position = "3.01 0 0"></a-box>
             <a-gltf-model class="mesa" src="#mesa" position="3.01 0 0" scale="0.05 0.05 0.05"></a-gltf-model>
+            <a-box ammo-body="type:static" ammo-shape="type:box" visible = "false" width = "3" height="3" depth = "2" position = "9 0 0"></a-box>
             <a-gltf-model class="mesa" src="#mesa" position="9 0 0" scale="0.05 0.05 0.05"></a-gltf-model>
         </a-entity>
         <a-entity id="fileira2" position="0 0 7">
-            <a-gltf-model class="mesa" src="#mesa" position="0 0 0" scale="0.05 0.05 0.05"></a-gltf-model>
+            <a-box ammo-body="type:static" ammo-shape="type:box" visible = "false" width = "3" height="3" depth = "2"></a-box>
+            <a-gltf-model class="mesa" src="#mesa" position="-0 0 0" scale="0.05 0.05 0.05"></a-gltf-model>
+            <a-box ammo-body="type:static" ammo-shape="type:box" visible = "false" width = "3" height="3" depth = "2" position = "3.01 0 0"></a-box>
             <a-gltf-model class="mesa" src="#mesa" position="3.01 0 0" scale="0.05 0.05 0.05"></a-gltf-model>
+            <a-box ammo-body="type:static" ammo-shape="type:box" visible = "false" width = "3" height="3" depth = "2" position = "9 0 0"></a-box>
             <a-gltf-model class="mesa" src="#mesa" position="9 0 0" scale="0.05 0.05 0.05"></a-gltf-model>
-            </a-entity>
+        </a-entity>
         <a-entity id="fileira3" position="0 0 10">
-                <a-gltf-model class="mesa" src="#mesa" position="0 0 0" scale="0.05 0.05 0.05"></a-gltf-model>
-                <a-gltf-model class="mesa" src="#mesa" position="3.01 0 0" scale="0.05 0.05 0.05"></a-gltf-model>
-                <a-gltf-model class="mesa" src="#mesa" position="9 0 0" scale="0.05 0.05 0.05"></a-gltf-model>
+            <a-box ammo-body="type:static" ammo-shape="type:box" visible = "false" width = "3" height="3" depth = "2"></a-box>
+            <a-gltf-model class="mesa" src="#mesa" position="-0 0 0" scale="0.05 0.05 0.05"></a-gltf-model>
+            <a-box ammo-body="type:static" ammo-shape="type:box" visible = "false" width = "3" height="3" depth = "2" position = "3.01 0 0"></a-box>
+            <a-gltf-model class="mesa" src="#mesa" position="3.01 0 0" scale="0.05 0.05 0.05"></a-gltf-model>
+            <a-box ammo-body="type:static" ammo-shape="type:box" visible = "false" width = "3" height="3" depth = "2" position = "9 0 0"></a-box>
+            <a-gltf-model class="mesa" src="#mesa" position="9 0 0" scale="0.05 0.05 0.05"></a-gltf-model>
         </a-entity>
         <a-entity id="fileira4" position="0 0 13">
-                <a-gltf-model class="mesa" src="#mesa" position="0 0 0" scale="0.05 0.05 0.05"></a-gltf-model>
-                <a-gltf-model class="mesa" src="#mesa" position="3.01 0 0" scale="0.05 0.05 0.05"></a-gltf-model>
-                <a-gltf-model class="mesa" src="#mesa" position="9 0 0" scale="0.05 0.05 0.05"></a-gltf-model>
+            <a-box ammo-body="type:static" ammo-shape="type:box" visible = "false" width = "3" height="3" depth = "2"></a-box>
+            <a-gltf-model class="mesa" src="#mesa" position="-0 0 0" scale="0.05 0.05 0.05"></a-gltf-model>
+            <a-box ammo-body="type:static" ammo-shape="type:box" visible = "false" width = "3" height="3" depth = "2" position = "3.01 0 0"></a-box>
+            <a-gltf-model class="mesa" src="#mesa" position="3.01 0 0" scale="0.05 0.05 0.05"></a-gltf-model>
+            <a-box ammo-body="type:static" ammo-shape="type:box" visible = "false" width = "3" height="3" depth = "2" position = "9 0 0"></a-box>
+            <a-gltf-model class="mesa" src="#mesa" position="9 0 0" scale="0.05 0.05 0.05"></a-gltf-model>
         </a-entity>
         <a-entity id="fileira5" position="0 0 16">
-            <a-gltf-model class="mesa" src="#mesa" position="0 0 0" scale="0.05 0.05 0.05"></a-gltf-model>
+            <a-box ammo-body="type:static" ammo-shape="type:box" visible = "false" width = "3" height="3" depth = "2"></a-box>
+            <a-gltf-model class="mesa" src="#mesa" position="-0 0 0" scale="0.05 0.05 0.05"></a-gltf-model>
+            <a-box ammo-body="type:static" ammo-shape="type:box" visible = "false" width = "3" height="3" depth = "2" position = "3.01 0 0"></a-box>
             <a-gltf-model class="mesa" src="#mesa" position="3.01 0 0" scale="0.05 0.05 0.05"></a-gltf-model>
+            <a-box ammo-body="type:static" ammo-shape="type:box" visible = "false" width = "3" height="3" depth = "2" position = "9 0 0"></a-box>
             <a-gltf-model class="mesa" src="#mesa" position="9 0 0" scale="0.05 0.05 0.05"></a-gltf-model>
         </a-entity>
         <a-plane ammo-body="type:static" ammo-shape="type:box" position="5 0 8" color="#aaaaa0" rotation="-90 0 0" width="15" height="24" src="textura.jpeg "

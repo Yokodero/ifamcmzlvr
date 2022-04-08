@@ -5,55 +5,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
     <script src="https://mixedreality.mozilla.org/ammo.js/builds/ammo.wasm.js"></script>
-    <script src="http://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
 
-    <title>Sala de Aulat</title>
+    <title>Sala de Aula</title>
 </head>
 
 <body>
-    <a-scene physics="driver:ammo;">
+    <a-scene physics="driver:ammo;" inspector-plugin-recast>
         <a-assets>
             <a-asset-item id="mesa" src="Mesa.gltf"></a-asset-item>
             <a-asset-item id="mesaP" src="MesaP.gltf"></a-asset-item>
+            <a-asset-item id="navmesh" src = "navmesh/navmesh.gltf"></a-asset-item>
         </a-assets>
-        <!--
-        <a-camera ammo-body="type:dinamyc" ammo-shape="type:box" position="0 3 0" wasd-controls-enabled="true"
-            wasd-controls="acceleration: 20; easing: 2">
-            <a-cursor 
-                animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1"
-                animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
-                animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1"
-                cursor="fuse: true;"
-                material="color: yellow; shader: flat"
-                position="0 0 -3"
-                geometry="primitive: ring">
-            </a-cursor>
-        </a-camera>
-        -->
-        <a-entity movement-controls="fly: false" position="0 1 5"
+        
+        <a-entity movement-controls="fly: false; speed:0.2; constrainToNavMesh: true" position="0 0 0" id="cam"
             geometry="primitive: cylinder; height: 1; radius: 0.15"
-            material="color: green; wireframe: true"
-            id="cam" ammo-body="type: kinematic" ammo-shape="type: cylinder">
+            material="color: green;" 
+            ammo-body="type:kinematic;" ammo-shape="type:cylinder;"
+        >
             <a-entity camera position="0 1.6 0" look-controls>
-                <a-cursor 
-                animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 3 3 3"
-                animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 3 3 3; to: 0.1 0.1 0.1"
-                animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 3 3 3"
-                cursor="fuse: true;"
-                material="color: yellow; shader: flat"
-                position="0 0 -3"
-                geometry="primitive: ring">
+                <a-cursor scale="1 1 1" color="yellow">
 
                 </a-cursor>
             </a-entity>
         </a-entity>
-        <a-box ammo-body="type: dynamic" ammo-shape="type: box" color = red; position = "0 3 0"ammo-body="type: dynamic" ammo-shape="type: box"></a-box>
-        <a-box ammo-body="type:static" ammo-shape="type:box" visible = "false" width = "3" height="3" depth = "2" position = "3.01 0 1.5"></a-box>
-            
+        
+        <a-entity gltf-model = "#navmesh" visible="false"nav-mesh></a-entity>
+        <a-box id ="box1" ammo-body="type:dynamic" ammo-shape="type:box;" width = "1" height="1" depth = "1" position="0 2 0"></a-box>
+        <a-box id = "s1" ammo-body="type:static" ammo-shape="type:box" visible = "false" width = "3" height="3" depth = "2" position = "3.01 0 1.5"></a-box>
         <a-gltf-model class="mesa" src="#mesaP" position="3.01 0 1.5" rotation="0 180 0" scale="0.05 0.05 0.05.">
         </a-gltf-model>
         <a-entity id="fileira1" position="0 0 4">
@@ -126,6 +110,8 @@
             visible:true;
             "
         ></a-sphere>
+
+       
     </a-scene>
 </body>
 
